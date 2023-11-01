@@ -1,0 +1,548 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+/** HEADER VIDEO & ANIMATION DU LOGO  **/
+.video-oscars {
+  z-index: 1;
+  position: relative;
+}
+
+.banner img {
+  animation: floatingLogo 5s ease-in-out infinite;
+  animation-delay: 1ms;
+}
+
+@keyframes floatingLogo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/** FADE IN SUR SECTIONS **/
+.banner {
+  height: 500px;
+  animation: fadeinDownBanner 5s;
+}
+.banner img {
+  position: absolute;
+  z-index: 2;
+}
+
+.story {
+  animation: fadeinUpSections 5s;
+}
+
+#studio {
+  animation: fadeinUpSections 5s;
+}
+
+footer {
+  animation: fadeinUpSections 5s;
+}
+
+@keyframes fadeinDownBanner {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes fadeinUpSections {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/** ANIMATION DES FLEURS PAGE PRINCIPALE  **/
+/** Section Story **/
+.story {
+  padding-top: 180px;
+}
+.story h2::before {
+  padding-top: 180px;
+}
+.story h2::after {
+  padding-top: 180px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.4% 72.1%;
+}
+.story__article::before {
+  padding-top: 180px;
+}
+.story__article::after {
+  padding-top: 180px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.4% 73.2%;
+}
+
+#studio {
+  padding-top: 180px;
+}
+#studio div::before {
+  padding-top: 180px;
+}
+#studio h2::before {
+  padding-top: 180px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 50% 69%;
+}
+#studio h2::after {
+  padding-top: 180px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 50% 75%;
+}
+
+.site-footer ul::after {
+  animation: rotate-animation 15s infinite linear;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/** ANIMATION DES TITRES AU SCROLL **/
+.animation-title {
+  position: relative;
+  animation: titleAnimation 0.9s ease-out;
+}
+
+.animation-title2 {
+  position: relative;
+  animation: titleAnimation 1.1s ease-in;
+}
+
+@keyframes titleAnimation {
+  0% {
+    top: 30px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes titleAnimation2 {
+  0% {
+    top: 60px;
+    opacity: 0;
+  }
+  90% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+/** SLIDER PERSONNAGES VS SWIPER  **/
+.swiper {
+  width: 90%;
+  padding-top: 50px;
+  margin-bottom: 70px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+.swiper-slide p {
+  text-align: center;
+}
+
+.story #characters {
+  justify-content: flex-start;
+  width: 100%;
+}
+.story #characters div {
+  flex: none;
+  padding-left: 84px;
+  padding-top: 200px;
+}
+
+/** SECTION PLACE NUAGES  **/
+.story #place {
+  background-image: url(../../assets/img/image_place.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.story #place .clouds {
+  position: relative;
+  filter: blur(9px);
+}
+.story #place .big-cloud {
+  margin-top: -28em;
+  padding-left: 20em;
+  position: relative;
+}
+.story #place .little-cloud {
+  margin-left: 2em;
+}
+
+/** SECTION  OSCARS 2022 **/
+.oscars {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  margin-top: 100px;
+  justify-content: space-evenly;
+  animation: fadeinUpSections 5s;
+}
+.oscars::before {
+  content: url("../../assets/img/Sunflower.png");
+  position: relative;
+  left: 0em;
+  top: -8em;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.5% 39%;
+}
+.oscars h3 {
+  background-image: url("../../assets/img/orange_oscars_bg.png");
+  background-size: 100%;
+  text-align: left;
+  font-size: 2.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 644px;
+}
+.oscars .logo-oscars {
+  width: 320px;
+  padding-top: 20px;
+}
+.oscars::after {
+  content: url("../../assets/img/orchid.png");
+  position: relative;
+  right: 0em;
+  top: -12em;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.1% 41.8%;
+}
+
+.site-footer::before {
+  display: none; /** cachée dans le footer et remonté intégration oscars **/
+}
+.site-footer::after {
+  display: none; /** cachée dans le footer et remonté intégration oscars **/
+}
+
+/***** HEADER AVEC MENU BURGER ********/
+.main-navigation .navigation-burger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+.main-navigation .navigation-burger .site-title {
+  font-size: 16px;
+}
+.main-navigation .navigation-burger a {
+  width: 90%;
+  text-align: center;
+  padding-left: 130px;
+}
+.main-navigation .navigation-burger button {
+  width: 10%;
+}
+.main-navigation .navigation-burger button .line {
+  width: 30px;
+}
+
+/** Animation Menu Burger **/
+.menu-burger {
+  cursor: pointer;
+  position: relative;
+}
+.menu-burger #span1 {
+  transform: translateY(0px);
+}
+.menu-burger #span3 {
+  transform: translateY(0px);
+}
+.menu-burger.active #span1 {
+  transform: translateY(5px) rotateZ(45deg);
+}
+.menu-burger.active #span2 {
+  background-color: transparent;
+}
+.menu-burger.active #span3 {
+  transform: translateY(-5px) rotateZ(-45deg);
+}
+
+/**  MENU NAVIGATION FULLSCREEN  **/
+.main-navigation #menu ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  animation: fadeinUpSections 2s;
+}
+.main-navigation #menu li {
+  position: relative;
+  font-size: 64px;
+}
+.main-navigation #menu li :hover {
+  font-weight: bold;
+  text-shadow: 0 0 10px orange;
+}
+.main-navigation #menu a {
+  display: block;
+  text-decoration: none;
+}
+
+.main-navigation.toggled ul {
+  display: flex;
+}
+
+/** Animations Menu Navigation FullScreen **/
+#menu {
+  display: none;
+  overflow: hidden;
+  background-color: #FFF5E9;
+}
+#menu::before {
+  content: url("../../assets/img/Orchid.png");
+  position: absolute;
+  margin-left: -65px;
+  margin-top: 30px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 50.1% 47.8%;
+}
+#menu ul .logo-menu {
+  height: 15%;
+  justify-content: center;
+  animation: floatingLogoMenu 4s ease-in-out infinite;
+}
+#menu ul li:nth-child(2)::before {
+  content: url("../../assets/img/blue_cat.png");
+  position: absolute;
+  margin-left: -260px;
+  margin-top: -40px;
+  animation: floatingLogo 8s ease-in-out infinite;
+}
+#menu ul li:nth-child(2)::after {
+  content: url("../../assets/img/Sunflower.png");
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -200px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.5% 44%;
+}
+#menu ul li:nth-child(3)::before {
+  content: url("../../assets/img/Flower.png");
+  position: absolute;
+  margin-left: -315px;
+  margin-top: 90px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 50.1% 40.8%;
+}
+#menu ul li:nth-child(3)::after {
+  content: url("../../assets/img/random_flower.png");
+  position: absolute;
+  margin-left: 830px;
+  margin-top: -200px;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 50.1% 44.8%;
+}
+#menu ul li:nth-child(4)::before {
+  content: url("../../assets/img/yellow_cat.png");
+  position: absolute;
+  margin-left: -570px;
+  margin-top: 180px;
+  animation: floatingLogo 7s ease-in-out infinite;
+}
+#menu ul li:nth-child(4)::after {
+  content: url("../../assets/img/black_cat.png");
+  position: absolute;
+  margin-left: 415px;
+  margin-top: -100px;
+  animation: floatingLogo 9s ease-in-out infinite;
+}
+#menu ul li:nth-child(5)::after {
+  content: url("../../assets/img/hibiscus_footer.png");
+  position: absolute;
+  margin-left: 730px;
+  margin-top: -280px;
+}
+
+/******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
+#menu.visible {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  height: 90vh;
+}
+
+main.desactive {
+  display: none;
+}
+
+footer.desactive {
+  display: none;
+}
+
+@keyframes floatingCats {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes floatingLogoMenu {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/** MEDIA QUERIES MOBILE ET TABLETTE **/
+/** MEDIA QUERIES  425px  Mobile **/
+@media (max-width: 425px) {
+  .banner {
+    background-image: url(../../assets/img/banner.png);
+    min-height: 500px;
+  }
+  .banner .video-oscars {
+    display: none;
+  }
+}
+/** MEDIA QUERIES  768px  Tablette **/
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .main-navigation #menu li {
+    font-size: 30px;
+  }
+  .navigation-burger .site-title {
+    font-size: 15px;
+  }
+  #menu.visible {
+    font-size: 48px;
+  }
+  .swiper-slide {
+    height: 300px;
+    width: 200px;
+  }
+  .swiper-slide img {
+    height: 300px;
+    width: 200px;
+  }
+  .story #place div {
+    padding-top: 160px;
+  }
+  .story #place .clouds {
+    display: none;
+  }
+  .oscars .logo-oscars {
+    padding-top: 60px;
+  }
+  ::before {
+    display: none;
+  }
+  ::after {
+    display: none;
+  }
+  .site-footer ul::after {
+    display: block;
+  }
+}
+/** MEDIA QUERIES  900px  **/
+@media (max-width: 900px) {
+  .main-navigation .navigation-burger a {
+    padding-left: 110px;
+    width: 80%;
+  }
+  .main-navigation .navigation-burger button {
+    width: 20%;
+  }
+}
+/** MEDIA QUERIES  1040px  **/
+@media (max-width: 1040px) {
+  .story #characters {
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+}
+/*** MEDIA QUERIES SECTION OSCARS 2022 ***/
+/** MEDIA QUERIES OSCARS 2022 Max 374px  Mobile **/
+@media (max-width: 374.9px) {
+  .oscars h3 {
+    font-size: 11px;
+    padding-top: 7em;
+  }
+}
+/** MEDIA QUERIES OSCARS 2022  375px à 470px Mobile **/
+@media (min-width: 375px) and (max-width: 470px) {
+  .oscars h3 {
+    font-size: 14px;
+    padding-top: 5em;
+  }
+}
+/** MEDIA QUERIES  OSCARS 2022 471 à 768 px Tablette **/
+@media (min-width: 470.1px) and (max-width: 767.9px) {
+  .oscars h3 {
+    font-size: 17px;
+    padding-top: 4em;
+  }
+}
+/** MEDIA QUERIES OSCARS 2022  769 à 960px  **/
+@media (min-width: 768px) and (max-width: 960px) {
+  .oscars h3 {
+    font-size: 19px;
+    padding-top: 3em;
+  }
+}
+/** MEDIA QUERIES OSCARS 2022  960 à 1229px  **/
+@media (min-width: 960.1px) and (max-width: 1229px) {
+  .oscars h3 {
+    font-size: 23px;
+    padding-top: 2em;
+  }
+}/*# sourceMappingURL=style.css.map */
